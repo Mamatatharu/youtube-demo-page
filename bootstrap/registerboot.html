@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css">
+	<script src="jquery.js"></script>
+	<script>
+		$(document).ready(function(){
+			$("#Cancel").click(function(){
+				$("#I1").val('');
+				$("#I2").val('');
+				alert("You deleted Username and Password")
+			});
+			$("#Login").click(function(){
+				var username = $("#I1").val();
+				var password = $("#I2").val();
+				$("#I1").val('');
+				$("#I2").val('');
+				alert(`Username:${username} Password:${password}`)
+			});
+		});
+	</script>
+</head>
+<body>
+	ul>li#item$*5
+<div class="row border border-2">
+	<div class="col-lg-6">
+		<div class="card w-50">
+			<div class="card-header bg-info">
+				<h3 class="text-center">Login</h3>
+			</div>
+			<div class="card-body bg-dark">
+				<label for="Username" class="text-white"><i class="fa fa-user"></i>Username</label>
+				<input id="I1" class="form-control" id="Username" type="text" name="Mamata">
+				<label for="Password" class="text-white" ><i class="fa fa-key"></i>Password</label>
+				<input id="I2" class="form-control" id="Password" type="password" name="name">
+			</div>
+			<div class="card-footer bg-info">
+				<button id="Cancel" class="btn btn-danger">Cancel</button>
+				<button id="Login" class="btn btn-success float-right">Login</button>
+			</div>
+	</div>
+</div>
+	<div class="col-lg-6">
+		<div class="card w-50 float-right">
+			<div class="card-header bg-info">
+				<h3 class="text-center">Register</h3>
+			</div>
+			<div class="card-body bg-dark">
+				<label for="Username" class="text-white">Username</label>
+				<input class="form-control" id="Username" type="text" name="Mamata">
+				<label for="Password" class="text-white">Password</label>
+				<input class="form-control" id="Password" type="password" name="name">
+			</div>
+			<div class="card-footer bg-info">
+				<button class="btn btn-danger">Cancel</button>
+				<button class="btn btn-success float-right">Register</button>
+			</div>
+	</div>
+	</div>
+</div>
+</body>
+</html>
