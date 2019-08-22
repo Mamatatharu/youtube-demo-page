@@ -2,7 +2,8 @@
 <html>
 <head>
 	<title></title>
-
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css">
+    
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<style type="text/css">
@@ -19,9 +20,14 @@
 	</style>
 </head>
 <body class="bg-danger">
+<div class="row border border-2 mt-5 ml-5 mr-5">
+	<div class="col-md-12">
+		<button onclick="showlogin()" style="float:right"><i id="load" class="fa fa-spinner fa-spin" style="visibility: hidden"></i>Register</button>
+	</div>
 
 <!-- <div class="row justify-content-center " style="margin-top: 200px;">	 -->
-<div class="card border border-2 rounded-top border-primary " style="margin-left:36%; margin-top:15%;width:400px !important;" >
+<div  id="login" class="card border border-2 rounded-top border-primary " style="margin-left:30%; margin-top:5%;width:400px !important; visibility: hidden;" >
+	<div>
 	<div class="card-header bg-primary">
 		<h3 class="text-center ">Login</h3>
 	</div>
@@ -37,5 +43,21 @@
 	</div>
 </div>
 </div>
+</div>
+<script>
+		function showloading()
+		{
+			document.getElementById("login").style.visibility="visible";
+			
+			document.getElementById("load").style.visibility="hidden";
+		}
+		function showlogin()
+		{
+			document.getElementById("load").style.visibility="visible";
+			setInterval(showloading,2000);
+	
+		}
+		</script>
+
 </body>
 </html>
