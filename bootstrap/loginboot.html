@@ -19,12 +19,20 @@
 		}
 	</style>
 </head>
-<body class="bg-danger">
-<div class="row border border-2 mt-5 ml-5 mr-5">
+<body>
+	<div id="field" class="bg-danger text-center">Please enter all the fields</div>
+<div id="reg" class="row border border-2 mt-5 ml-5 mr-5">
 	<div class="col-md-12">
-		<button onclick="showlogin()" style="float:right"><i id="load" class="fa fa-spinner fa-spin" style="visibility: hidden"></i>Register</button>
-	</div>
+		<label for="Username" class="mt-5">Username</label><br>
+		<input id="uname" class="form-control" type="text" name=""><br>
+		<label for="Password">Password</label> 
+		<label id="displaypasswd"></label>
+		<br>
+		<span><input id="passwd" type="password" name="" ></span><span><button onclick="show()"><i class="fa fa-key"></i></button></span>
 
+		<button onclick="showlogin();" style="float:right"><i id="load" class="fa fa-spinner fa-spin" style="visibility: hidden"></i>Register</button>
+	</div>
+</div>
 <!-- <div class="row justify-content-center " style="margin-top: 200px;">	 -->
 <div  id="login" class="card border border-2 rounded-top border-primary " style="margin-left:30%; margin-top:5%;width:400px !important; visibility: hidden;" >
 	<div>
@@ -43,19 +51,38 @@
 	</div>
 </div>
 </div>
-</div>
 <script>
 		function showloading()
 		{
+
+
 			document.getElementById("login").style.visibility="visible";
 			
 			document.getElementById("load").style.visibility="hidden";
+			
 		}
 		function showlogin()
 		{
 			document.getElementById("load").style.visibility="visible";
-			setInterval(showloading,2000);
+			var username=document.getElementById("uname").value;
+			var password=document.getElementById("passwd").value;
+			if(username!=='' && password!=='')
+			{
+				setInterval(showloading,2000);
+			document.getElementById("reg").style.visibility="hidden";
+                
+			}
+			else 
+			{
+				alert("Please enter the text");
+			document.getElementById("load").style.visibility="hidden";
+		     }
 	
+		}
+		function show()
+		{
+			var password=document.getElementById("passwd").value;
+			document.getElementById("displaypasswd").innerHTML=`Password:${password}`;
 		}
 		</script>
 
