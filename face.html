@@ -74,7 +74,7 @@
 <div style="width:35%;float: left; ">
 	<table style="border-left:2px solid lightgreen;width: 50%;height: 550px;">
 		<tr>
-			<th><video  style="margin-top: -150px;" width="430" height="400" controls>
+			<th><video id="v0" style="margin-top: -150px;" width="430" height="400" controls>
 				<source  src="viedo.mp4" type="video/mp4">
 			</video>
              <p style="margin-right: 200px;">#Trending<br/>
@@ -96,36 +96,36 @@
 	<table style="border-left:2px solid lightgreen;">
    
 		<tr>
-			<th style="float: left"><video width=200 height=200 controls>				
+			<th style="float: left"><video onclick="changevideo()" id="v1" width=200 height=200 controls>				
 				<source src="Videos.mp4" type="video/mp4">
 			</video>
 			<span>Bepanaha Song</span>    
 		</th>
 	</tr>
 	<tr>
-			<th style="float: left"><video width="200" height=200 controls>				
-				<source src="Videos.mp4" type="video/mp4">
+			<th style="float: left"><video id="v2" width="200" height=200 controls>				
+				<source  src="Bepanaha.mp4" type="video/mp4">
 			</video>
 			<span>Bepanaha Song</span>    
 		</th>
 	</tr>
 	      <tr>
-			<th style="float: left"><video width=200 height=200 controls>				
-				<source src="Videos.mp4" type="video/mp4">
+			<th style="float: left"><video id="v3" width=200 height=200 controls>				
+				<source  src="Videos.mp4" type="video/mp4">
 			</video>
 			<span>Bepanaha Song</span>    
 		</th>
 	</tr>
 	<tr>
 			<th style="float: left"><video width=200 height=200 controls>				
-				<source src="Videos.mp4" type="video/mp4">
+				<source id="v4" src="Videos.mp4" type="video/mp4">
 			</video>
 			<span>Bepanaha Song</span>    
 		</th>
 	</tr>
 	<tr>
 			<th style="float: left"><video width=200 height=200 controls>				
-				<source src="Videos.mp4" type="video/mp4">
+				<source id="v5" src="Videos.mp4" type="video/mp4">
 			</video>
 			<span>Bepanaha Song</span>    
 		</th>
@@ -366,5 +366,17 @@
 </tr>
 </table>
 </div>
+<script>
+function changevideo()
+{
+	var videoobject=[{'video_id':1,'src':'Videos.mp4','likes':2323,'dislikes':123,'comment':15,'share':5},
+	{'video_id':2,'src':'Bepanaha.mp4','likes':3323,'dislikes':103,'comment':45,'share':10}];
+var Createvideo=document.createElement("video");
+var Createvideosrc=document.createElement("source");
+Createvideosrc.setAttribute('src','viedo.mp4');
+Createvideo.appendChild(Createvideosrc);
+document.getElementById("v0").appendChild(Createvideosrc);
+}
+</script>
 </body>
 </html>
