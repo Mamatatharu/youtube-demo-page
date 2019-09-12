@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    .error
+    {
+        display: inline-block; 
+        color:tomato;
+        padding:5px;
+    }</style>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body style="background-image: url('../registerbackground.jpg');">
+    <div style="width:400px;margin-left:35%;"><br>
+        <form id="registerform" method="" >
+            <div class="card">
+                <div class="card-header bg-primary">
+                    <h2 style="text-align:center; color:white;">Registers</h2>
+                </div>
+                <div class="card-body">
+       <span style="margin-left:10px;"> Firstname</span>
+        <input id="fname" type="text" name="fname"><br><br>
+       <span style="margin-left:10px;"> Lastname</span>
+        <input id="lname" type="text" name="lname"><br><br>
+       <span style="margin-left:10px;"> Email Id</span>
+        <input id="eid" type="text" name="eid" style="margin-left: 10px"><br><br>
+       <span style="margin-left:10px;"> Password</span>
+        <input id="pswd" type="password" name="pswd"><br><br>
+        </div>
+        <div class="card-footer">
+        <a id="reset" class="btn btn-info">Reset</a>
+        <button class="btn btn-success bg-link" type="submit" style="float:right;">Register</button>
+
+        </div>
+            </div>
+        </form>
+    </div>
+    <script>
+   $("#registerform").on('submit',function(e)
+   {
+       e.preventDefault();
+       $('span.error').remove();
+    var fname,lname,eid,pswd;
+        fname=$("#fname").val();
+        lname=$("#lname").val();
+        eid=$("#eid").val();
+        pswd=$("#pswd").val();
+if(fname==="" )
+{
+    $("#fname").after(`<span class="error ">Firstname is required </span>`);
+}
+if(lname==="" )
+{
+    $("#lname").after(`<span class="error ">Lastname is required </span>`);
+}
+if(eid==="" )
+{
+    $("#eid").after(`<span class="error">Email Id is required </span>`);
+}
+if(pswd==="" )
+{
+    $("#pswd").after(`<span class="error">Password is required </span>`);
+}
+   })
+   $("#reset").on('click',function(e)
+   {
+       e.preventDefault();
+       $("#registerform").trigger('reset')
+   })
+
+    
+    </script>
+</body>
+</html>

@@ -3,6 +3,7 @@
 <head>
 	<title></title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css">
+    <script src="jquery.js"></script>
 
 	<style>
 		div.home:hover
@@ -365,10 +366,22 @@
 <div style="width: 6px;height: 6px;border-radius: 50%;background-color: dodgerblue;color: dodgerblue;"></div></th></th>
 </tr>
 </table>
+
+</div>
+<p id="objectlist">
+	
+</p>
+
+<div id="section1">
+
 </div>
 <script>
-function changevideo()
-{
+// function changevideo()
+// {
+
+var a= $('div#section1');
+a.append(`<p>Shailesh</p><img src="photo.jpg" style="width:200px; height:200px;" />`)
+	
 	var videoobject=[{'video_id':1,'src':'Videos.mp4','likes':2323,'dislikes':123,'comment':15,'share':5},
 	{'video_id':2,'src':'Bepanaha.mp4','likes':3323,'dislikes':103,'comment':45,'share':10}];
 var Createvideo=document.createElement("video");
@@ -376,7 +389,17 @@ var Createvideosrc=document.createElement("source");
 Createvideosrc.setAttribute('src','viedo.mp4');
 Createvideo.appendChild(Createvideosrc);
 document.getElementById("v0").appendChild(Createvideosrc);
+
+var b='';
+for(var i=0;i<videoobject.length;i++)
+{
+	console.log("hello");
+	b= b + ` Video_ID:${videoobject[i].video_id} Source:${videoobject[i].src} likes:${videoobject[i].likes} Dislikes:${videoobject[i].dislikes} Comment:${videoobject[i].comment} Share:${videoobject[i].share}`;
 }
+
+document.getElementById('objectlist').innerHTML=b;
+
+// }
 </script>
 </body>
 </html>

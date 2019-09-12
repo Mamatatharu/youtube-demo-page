@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+    <button id="btn"data-toggle="modal" data-target="#modalid" data-username="Shyam" data-password="pwd">Launch@hari</button>
+    <button id="btn1"data-toggle="modal" data-target="#modalid"data-username="Shyam">Launch@Ram</button>
+    <button id="btn2"data-toggle="modal" data-target="#modalid">Launch@Mamata</button>
+    <button id="btn3"data-toggle="modal" data-target="#modalid">Launch@Ayu</button>
+    <button id="btn4"data-toggle="modal" data-target="#modalid">Launch@Reema</button>
+    <div class="modal" id="modalid">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title">Information</h1>
+                    <button data-dismiss="modal" class="close">
+                        <span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Username<br>
+                    <input type="text" name=""><br><br>
+                    Password<br>
+                    <input type="password" name="">
+                </div>
+                <div class="modal-footer">
+                  <button id="click">save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var buttonid='';
+    $('#modalid').on('shown.bs.modal', function(e)
+    {
+        console.log("Hello")
+       buttonid=$(e.relatedTarget);
+    
+
+        var buttontext= $(buttonid).data("username");
+        var buttontext1= $(buttonid).data("password");
+    
+    
+        $(this).find('input').eq(0).val(buttontext).focus();
+
+        $(this).find('input').eq(1).val(buttontext1).focus();
+    })
+  $('#click').on('click',function(e)
+  {
+
+      var username= $("#modalid").find("input").eq(0).val();
+      var password= $("#modalid").find("input").eq(1).val();
+$(buttonid).data("username",username);
+$(buttonid).data("password",password);
+$("#modalid").modal('hide');
+
+  })
+    </script>
+</body>
+</html>

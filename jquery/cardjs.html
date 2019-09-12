@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script src="jquery.js"></script>
+    
+</head>
+<body>
+    <div class="row">
+            <div class="card" >
+                <div class="card-header">
+                    <p>Information</p>
+                </div>
+                <div class="card-body" style="display: none">
+                    <p>Name:Mamata Tharu<br/>
+                        Roll:13<br/>
+                        Address:Pathardada<br/>
+                    </p>
+                        
+                </div>
+            </div>
+        </div>
+        <button onclick="stopslide()">Stop</button>
+        
+<script>
+$('.card-header').on('click',function(e)
+{
+    $('.card-body').slideDown(5000);
+})
+function stopslide()
+{
+$('.card-body').stop();
+}
+</script>
+</body>
+</html>

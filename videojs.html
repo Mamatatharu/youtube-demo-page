@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="jquery.js"></script>
+</head>
+<body>
+    
+<div id="section1">
+
+    </div>
+    <script>
+        
+        var a= $('div#section1');
+        a.append(`<p>Mamata</p><img src="photo.jpg" style="width:200px; height:200px;" />`)
+            
+            var videoobject=[{'video_id':1,'src':'Videos.mp4','likes':2323,'dislikes':123,'comment':15,'share':5},
+            {'video_id':2,'src':'Bepanaha.mp4','likes':3323,'dislikes':103,'comment':45,'share':10}];
+        // var Createvideo=document.createElement("video");
+        // var Createvideosrc=document.createElement("source");
+        // Createvideosrc.setAttribute('src','viedo.mp4');
+        // Createvideo.appendChild(Createvideosrc);
+        // document.getElementById("v0").appendChild(Createvideosrc);
+        
+        var b='';
+        for(var i=0;i<videoobject.length;i++)
+        {
+            console.log("hello");
+            b= b + ` Video_ID:${videoobject[i].video_id} Source:${videoobject[i].src} likes:${videoobject[i].likes} Dislikes:${videoobject[i].dislikes} Comment:${videoobject[i].comment} Share:${videoobject[i].share}`;
+        }
+        
+        document.getElementById('objectlist').innerHTML=b;
+        
+        </script>
+        
+</body>
+</html>

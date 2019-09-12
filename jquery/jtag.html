@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="jquery.js"></script>
+</head>
+<body>
+    <button id="move">Text</button>
+   
+
+    <div id="text"></div>
+   <input id="int">
+   <p id="p1"></p>
+    <p id="hello">Hello</p>
+    <h2 id="h">Heading</h2>
+    <p class="parag">Welcome to jquery.</p>
+    <script>
+        $('#int').val("text1 gfgnh");
+        function mouseout()
+        {
+            $('#text').append(`Username</br><input type="text" name=""><br/><br/>
+        Password<br/><input type="password" name=""><br/><br/>
+        <button style="margin-left:25px";>submit</button></br>
+   <p id="p1"></p>
+    <p id="hello">Hello</p>
+    <h2 id="h">Heading</h2>
+    <p class="parag">Welcome to jquery.</p>`);   
+        }
+        function mousemove()
+        {
+            var a=  $('#hello').text();
+            console.log(a);
+            $('#int').val();
+              console.log($('#h').text());
+            console.log($('.parag').text());
+          $('#p1').text("Hai");
+        $('#text').append(`Username</br><input type="text" name=""><br/><br/>
+        Password<br/><input type="password" name=""><br/><br/>
+        <button style="margin-left:25px";>submit</button></br>
+   <p id="p1"></p>
+    <p id="hello">Hello</p>
+    <h2 id="h">Heading</h2>
+    <p class="parag">Welcome to jquery.</p>`);
+        }
+        $("#move").on('mouseover',function(e){
+            console.log(e.target.id);
+           $("#move").css("backgroundColor","red");
+        })
+        $("#move").on('mouseout',function(e){
+           $("#move").css("backgroundColor","lightgreen");
+        })
+        $("#move").on('focus',function(e){
+           $("#move").css("backgroundColor","blue");
+        })
+        
+              </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="jquery.js"></script>
+</head>
+<body>
+    <p>Hello</p>
+    <button id="btnh" onclick="hide()">Hide</button>
+    <button id="btnfo" onclick="fadeout()">fadeout</button>
+    <button id="btnfi" onclick="fadein()">fadein</button>
+    <button id="btnft" onclick="fadetoggle()">fadetoggle</button>
+    <button id="btnft" onclick="fadeTo()">fadeto</button>
+<script>
+function hide()
+{
+    $('p').toggle();
+}
+function fadeout()
+{
+    $('p').fadeOut(5000);
+}
+function fadein()
+{
+    $('p').fadeIn();
+}
+function fadetoggle()
+{
+    $('p').fadeToggle();
+}
+function fadein()
+{
+    $('p').fadeTo("slow",0.5);
+}
+</script>
+</body>
+</html>

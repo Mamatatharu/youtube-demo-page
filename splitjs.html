@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p>Seperate the number using split function.</p>
+    <p>Trim is used to remove space</p>
+    <script>
+    var a="2076-05-18";
+    var b=a.split('-');
+    console.log(b[0]);
+    console.log(b[1]);
+    console.log(b[2]);
+    var c="  hellonepal  ";
+    c=c.trim();
+    console.log(c);
+    var d="Hellonepal";
+   d= d.slice(0,4);
+    console.log(d);
+    var e="hellonepal";
+    e=e.toUpperCase();
+    console.log(e);
+    var f="HELLONEPAL";
+    f=f.toLowerCase();
+    console.log(f);
+    var g=23532.356;
+    g=parseInt(g);
+    var t= typeof g;
+    console.log(t);
+    var i="Hello";
+    i=typeof i;
+    console.log(i);
+    var j="235.67";
+    j=typeof j;
+    j=Number(j);
+    j=typeof j;
+    console.log(j);
+    var k=2357.8;
+    k=typeof k;
+    k=k.toString();
+    k=typeof k;
+    console.log(k);
+    var l=2035.8989;
+    m=l.toString().split('.');
+    m[1]=m[1].slice(0,2);
+    console.log(`${m[0]}.${m[1]}`);
+    </script>
+</body>
+</html>
